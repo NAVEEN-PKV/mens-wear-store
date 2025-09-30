@@ -35,7 +35,7 @@ export class AdminDashboard {
       });
     });
 
-    const sorted = [...salesMap.values()].sort((a, b) => b.count - a.count);
+    const sorted = Array.from(salesMap.values()).sort((a, b) => b.count - a.count);
     return sorted.slice(0, 3).map(entry => entry.product);
   }
 }
